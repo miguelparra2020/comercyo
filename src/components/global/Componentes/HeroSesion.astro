@@ -1,6 +1,86 @@
 ---
-
+import ImagenCompanyJpg from '@img/logoCompany.jpg'
 ---
-<div class="min-h-screen bg-gradient-to-br from-gray-50 via-white to-red-50">
-      Comercyo
+
+<section class="relative min-h-screen flex items-center overflow-hidden bg-neutral-50">
+
+  <!-- Subtle background texture -->
+  <div class="absolute inset-0 bg-gradient-to-b from-white via-neutral-50 to-neutral-100"></div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="max-w-5xl mx-auto text-center">
+
+      <!-- Brand -->
+      <div class="flex flex-col items-center mb-8">
+        <img
+          src={ImagenCompanyJpg}
+          alt="commercyo logo"
+          class="w-50 h-50 mb-3"
+        />
+        <span class="text-xl font-semibold tracking-tight text-neutral-900">
+          commercyo<span class="text-indigo-600">.com</span>
+        </span>
       </div>
+
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-white border border-neutral-200 text-sm text-neutral-600 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        SEO • Velocidad • Escalabilidad
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-balance text-neutral-900">
+        No vendes más<br />
+        <span class="text-indigo-600">
+          porque no te encuentran.
+        </span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="text-xl sm:text-2xl text-neutral-600 max-w-3xl mx-auto mb-10 text-pretty">
+        Creamos landing pages ultrarrápidas y optimizadas para Google,
+        listas para evolucionar a ecommerce, CRM y sistemas empresariales
+        sin rehacer tu web.
+      </p>
+
+      <!-- Value points -->
+      <div class="flex flex-col sm:flex-row justify-center gap-6 mb-12 text-neutral-700 text-base">
+        <span>⚡ SEO técnico real</span>
+        <span>🚀 100/100 en Lighthouse</span>
+        <span>📈 Escalable desde el día uno</span>
+      </div>
+
+      <!-- CTA -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="#contacto"
+          class="px-10 py-4 rounded-lg text-lg font-semibold
+                 bg-indigo-600 text-white
+                 hover:bg-indigo-500
+                 transition-all shadow-lg shadow-indigo-600/25"
+        >
+          Quiero aparecer en Google
+        </a>
+
+        <a
+          href="#estrategia"
+          class="px-10 py-4 rounded-lg text-lg font-semibold
+                 border border-neutral-300 bg-white
+                 hover:bg-neutral-100 transition-all"
+        >
+          Ver la estrategia
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-neutral-400">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+    </svg>
+  </div>
+
+</section>
