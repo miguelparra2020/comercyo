@@ -1,0 +1,68 @@
+---
+const differentiators = [
+  {
+    title: "Todo en una sola plataforma",
+    description: "No más 10 suscripciones. Una herramienta, un login, todo conectado."
+  },
+  {
+    title: "Pensado para crecer",
+    description: "Empieza con lo básico, activa funciones avanzadas cuando las necesites."
+  },
+  {
+    title: "Hecho a tu medida",
+    description: "No es una plantilla genérica. Es tu marca, tu estilo, tu mensaje."
+  },
+  {
+    title: "Tecnología moderna",
+    description: "Stack actualizado, velocidad extrema, mejor posicionamiento SEO."
+  },
+  {
+    title: "Sin dependencia externa",
+    description: "Tu negocio no depende de cambios de precio o políticas de terceros."
+  }
+];
+---
+<section class="py-24 bg-neutral-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="max-w-3xl mx-auto text-center mb-20">
+      <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-balance text-gray-900">
+        ¿Por qué elegir
+        <span class="bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+          Comercyo
+        </span>
+        ?
+      </h2>
+      <p class="text-xl text-gray-600 text-pretty">
+        No somos una herramienta más.  
+        Somos tu aliado tecnológico para crecer con orden y visión de largo plazo.
+      </p>
+    </div>
+
+    <!-- Differentiators -->
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      {differentiators.map((item) => (
+        <div
+          class="p-10 bg-white border border-gray-200 rounded-2xl
+                 hover:border-indigo-500 hover:shadow-lg transition-all"
+        >
+
+          <h3
+            class="text-xl font-bold mb-4
+                   bg-gradient-to-r from-indigo-600 to-blue-600
+                   bg-clip-text text-transparent"
+          >
+            {item.title}
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed">
+            {item.description}
+          </p>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

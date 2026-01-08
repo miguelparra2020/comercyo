@@ -1,0 +1,68 @@
+---
+const audiences = [
+  {
+    title: "Emprendedores",
+    description: "Validas tu idea, necesitas presencia digital rápido y sin complicaciones",
+    icon: "💡"
+  },
+  {
+    title: "Negocios físicos",
+    description: "Quieres vender online pero no sabes por dónde empezar",
+    icon: "🏪"
+  },
+  {
+    title: "Empresas en crecimiento",
+    description: "Necesitas control, escalabilidad y dejar de depender de múltiples herramientas",
+    icon: "📈"
+  }
+];
+---
+<section class="py-24 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="max-w-3xl mx-auto text-center mb-20">
+      <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-balance text-gray-900">
+        ¿Para quién es
+        <span class="bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+          Comercyo
+        </span>
+        ?
+      </h2>
+      <p class="text-xl text-gray-600 text-pretty">
+        Para negocios que quieren crecer en digital con estructura,
+        claridad y visión de largo plazo.
+      </p>
+    </div>
+
+    <!-- Audiences -->
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {audiences.map((audience) => (
+        <div
+          class="p-10 bg-white border border-gray-200 rounded-2xl text-center
+                 hover:border-indigo-500 hover:shadow-lg transition-all"
+        >
+
+          <!-- Icon -->
+          <div class="w-16 h-16 mx-auto mb-6 rounded-2xl
+                      bg-gradient-to-br from-indigo-100 to-blue-100
+                      flex items-center justify-center text-3xl">
+            {audience.icon}
+          </div>
+
+          <!-- Title -->
+          <h3 class="text-xl font-bold mb-4 text-gray-900">
+            {audience.title}
+          </h3>
+
+          <!-- Description -->
+          <p class="text-gray-600 leading-relaxed">
+            {audience.description}
+          </p>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

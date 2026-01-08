@@ -5,6 +5,7 @@ export { default as HeroVisual } from "./HeroVisual.astro"
 export { default as Problems } from "./Problems.astro"
 export { default as Solutions } from "./Solutions.astro"
 export { default as Roadmap } from "./Roadmap.astro"
-
+export { default as TargetAudience } from "./TargetAudience.astro"
+export { default as Differentiators } from "./Differentiators.astro"
 
 
