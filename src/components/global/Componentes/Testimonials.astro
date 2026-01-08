@@ -1,0 +1,111 @@
+---
+const testimonials = [
+  {
+    name: "Sebastian García",
+    role: "Dueño de negocio",
+    company: "La feria del aseo",
+    quote: "Por fin entendí cómo tener presencia digital sin perder tiempo ni dinero. Todo quedó claro desde el inicio.",
+    initials: "SE"
+  },
+  {
+    name: "Jhon Andrés",
+    role: "Dueño de negocio",
+    company: "The house exclusive",
+    quote: "No solo me hicieron la landing, me explicaron el camino para crecer sin volver a empezar de cero.",
+    initials: "JA"
+  },
+  {
+    name: "Benhur Chica",
+    role: "Profesor retirado",
+    company: "Sistemas autoorganizados",
+    quote: "La diferencia está en la visión. No es una web más, es el conjunto de herramientas que necesito para avanzar.",
+    initials: "BE"
+  }
+];
+---
+<section class="py-24 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="max-w-3xl mx-auto text-center mb-20">
+      <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-balance text-gray-900">
+        Lo que dicen quienes ya empezaron con
+        <span class="bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+          Comercyo
+        </span>
+      </h2>
+      <p class="text-xl text-gray-600 text-pretty">
+        Negocios reales que decidieron construir su ecosistema digital con visión de futuro.
+      </p>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {testimonials.map((testimonial) => (
+        <div
+          class="p-10 bg-neutral-50 border border-gray-200 rounded-2xl
+                 hover:shadow-lg transition-all flex flex-col"
+        >
+
+          <!-- Quote -->
+          <p class="text-gray-700 leading-relaxed mb-8 flex-1">
+            “{testimonial.quote}”
+          </p>
+
+          <!-- Author -->
+          <div class="flex items-center gap-4 pt-6 border-t border-gray-200">
+            
+            <!-- Avatar -->
+            <div
+              class="w-12 h-12 rounded-full
+                     bg-gradient-to-br from-indigo-600 to-blue-600
+                     flex items-center justify-center text-white font-bold"
+            >
+              {testimonial.initials}
+            </div>
+
+            <!-- Info -->
+            <div>
+              <p class="font-semibold text-gray-900">
+                {testimonial.name}
+              </p>
+              <p class="text-sm text-gray-600">
+                {testimonial.role} · {testimonial.company}
+              </p>
+            </div>
+
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+  <!-- CTA -->
+<div class="mt-16 text-center">
+  <a
+    href="/publicaciones"
+    class="inline-flex items-center gap-2 px-8 py-4
+           rounded-lg font-semibold text-lg
+           bg-white border border-gray-300
+           text-gray-900
+           hover:border-indigo-500 hover:text-indigo-600
+           hover:shadow-md transition-all"
+  >
+    Ver todas las publicaciones
+    <svg
+      class="w-5 h-5"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M13 7l5 5m0 0l-5 5m5-5H6"
+      />
+    </svg>
+  </a>
+</div>
+
+</section>
