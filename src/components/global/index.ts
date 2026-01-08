@@ -1,4 +1,4 @@
 export { Header } from "./Header"
 export { Layout } from "./Layout"
 export { LayoutGeneral } from "./LayoutGeneral"
-export {  MenuView, DescargarApp, HeroSesion, HeroVisual} from "./Componentes"
+export {  MenuView, DescargarApp, HeroSesion, HeroVisual, Problems, Solutions, Roadmap} from "./Componentes"

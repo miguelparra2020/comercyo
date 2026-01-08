@@ -1,0 +1,55 @@
+---
+const problems = [
+  {
+    title: "Demasiadas herramientas",
+    description: "Landing por un lado, ecommerce por otro, CRM aparte. Nada se conecta y todo depende de procesos manuales."
+  },
+  {
+    title: "Costos que se acumulan",
+    description: "Pagas múltiples suscripciones mensuales que crecen sin darte más control ni mejores resultados."
+  },
+  {
+    title: "Procesos sin orden",
+    description: "Clientes dispersos, ventas sin seguimiento y decisiones tomadas a ciegas."
+  },
+  {
+    title: "Poco control del negocio",
+    description: "Dependes de plataformas que cambian precios, reglas o funciones y afectan directamente tu operación."
+  }
+];
+---
+
+<section id="problema" class="py-24 bg-neutral-50">
+  <div class="container mx-auto px-6">
+    
+    <!-- Header -->
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-balance text-neutral-900">
+        El caos digital que frena tu negocio
+      </h2>
+      <p class="text-xl text-neutral-600 text-pretty">
+        Crecer en digital no debería sentirse como apagar incendios todos los días.
+      </p>
+    </div>
+    
+    <!-- Problems grid -->
+    <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+      {problems.map((problem) => (
+        <div class="p-8 bg-white border border-neutral-200 rounded-2xl
+                    hover:shadow-lg hover:-translate-y-1 transition-all">
+          
+          <h3 class="text-2xl font-semibold mb-3 text-neutral-900">
+            {problem.title}
+          </h3>
+
+          <p class="text-neutral-600 leading-relaxed">
+            {problem.description}
+          </p>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+

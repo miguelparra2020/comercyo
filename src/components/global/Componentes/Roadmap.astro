@@ -1,0 +1,121 @@
+---
+const phases = [
+  {
+    number: "01",
+    title: "Landing Profesional",
+    status: "Disponible hoy",
+    description: "Presencia digital sólida, rápida y optimizada para Google. El punto de partida correcto.",
+    color: "from-indigo-600 to-indigo-500"
+  },
+  {
+    number: "02",
+    title: "Ecommerce",
+    status: "Próximamente",
+    description: "Convierte tu tráfico en ventas con catálogo, pagos y control básico sin perder SEO.",
+    color: "from-emerald-600 to-emerald-500"
+  },
+  {
+    number: "03",
+    title: "CRM",
+    status: "Próximamente",
+    description: "Centraliza clientes, oportunidades y seguimiento comercial en un solo lugar.",
+    color: "from-purple-600 to-purple-500"
+  },
+  {
+    number: "04",
+    title: "ERP",
+    status: "Próximamente",
+    description: "Gestiona inventario, finanzas y operaciones desde una única plataforma.",
+    color: "from-pink-600 to-pink-500"
+  },
+  {
+    number: "05",
+    title: "ANUNCIOS META BUSSINES & GOOGLE ADS",
+    status: "Opcional",
+    description: "Gestionamos sus campañas publicitarias directamente desde Comercyo para maximizar tu alcance de manera organica y pautada con estrategías eficientes.",
+    color: "from-blue-600 to-blue-500"
+  }
+];
+---
+
+<section id="roadmap" class="py-24 bg-white relative">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="max-w-3xl mx-auto text-center mb-20">
+      <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-balance text-gray-900">
+        El camino hacia tu
+        <span class="bg-gradient-to-r from-indigo-600 to-emerald-600 bg-clip-text text-transparent">
+          ecosistema digital completo
+        </span>
+      </h2>
+      <p class="text-xl text-gray-600 text-pretty leading-relaxed">
+        No necesitas todo desde el inicio.  
+        Empiezas con lo esencial y avanzas paso a paso, sin rehacer tu web ni perder posicionamiento.
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <div class="max-w-4xl mx-auto">
+      <div class="space-y-12">
+        {phases.map((phase, index) => (
+          <div class="relative">
+
+            {index < phases.length - 1 && (
+              <div class="absolute left-8 top-20 w-px h-full bg-gray-200"></div>
+            )}
+
+            <div class="flex gap-6 items-start">
+
+              <!-- Step number -->
+              <div
+                class={`w-16 h-16 rounded-2xl bg-gradient-to-br ${phase.color}
+                        flex items-center justify-center text-lg font-bold
+                        text-white flex-shrink-0 relative z-10 shadow-md`}
+              >
+                {phase.number}
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1 pt-1">
+                <div class="flex flex-wrap items-center gap-3 mb-3">
+                  <h3 class="text-2xl font-bold text-gray-900">
+                    {phase.title}
+                  </h3>
+
+                  <span
+                    class={`px-3 py-1 rounded-full text-xs font-semibold tracking-wide ${
+                      phase.status === 'Disponible hoy'
+                        ? 'bg-emerald-100 text-emerald-700'
+                        : phase.status === 'Opcional'
+                        ? 'bg-blue-100 text-blue-700'
+                        : 'bg-gray-100 text-gray-600'
+                    }`}
+                  >
+                    {phase.status}
+                  </span>
+                </div>
+
+                <p class="text-gray-600 leading-relaxed max-w-xl">
+                  {phase.description}
+                </p>
+              </div>
+
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Closing line -->
+    <div class="max-w-3xl mx-auto text-center mt-20">
+      <p class="text-lg text-gray-600">
+        Todo funciona sobre la misma base tecnológica.  
+        <span class="text-gray-900 font-semibold">
+          Sin migraciones. Sin reconstrucciones. Sin perder lo construido.
+        </span>
+      </p>
+    </div>
+
+  </div>
+</section>

@@ -2,6 +2,9 @@ export { default as MenuView } from "./MenuView"
 export { default as DescargarApp } from "./DescargarApp"
 export { default as HeroSesion } from "./HeroSesion.astro"
 export { default as HeroVisual } from "./HeroVisual.astro"
+export { default as Problems } from "./Problems.astro"
+export { default as Solutions } from "./Solutions.astro"
+export { default as Roadmap } from "./Roadmap.astro"
 
 
 
