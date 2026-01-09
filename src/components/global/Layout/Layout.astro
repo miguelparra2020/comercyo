@@ -173,9 +173,21 @@ const {
 			<slot />
 		</main>
 
-		<script>
-			// This is a hack to get vite-plugin-pwa to generate a sw.js file.
-			// Do not remove this script tag.
+		<!-- Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+		<!-- Event snippet for Compra conversion page -->
+		<script is:inline>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'GA_MEASUREMENT_ID');
+		  gtag('event', 'conversion', {
+		      'send_to': 'AW-17863290847/O96SCL3x6d8bEN_f8MVC',
+		      'value': 1.0,
+		      'currency': 'COP',
+		      'transaction_id': ''
+		  });
 		</script>
+
 	</body>
 </html>
