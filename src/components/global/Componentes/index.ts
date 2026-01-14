@@ -8,4 +8,5 @@ export { default as Roadmap } from "./Roadmap.astro"
 export { default as TargetAudience } from "./TargetAudience.astro"
 export { default as Differentiators } from "./Differentiators.astro"
 export { default as Testimonials } from "./Testimonials.astro"
+export { default as PricingProcess } from "./PricingProcess.astro"
 
