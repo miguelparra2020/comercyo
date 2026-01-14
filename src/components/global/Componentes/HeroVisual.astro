@@ -3,17 +3,24 @@ import ImagenComercyoHero from '@img/comercyohero.png'
 ---
 
 {/* Hero Visual - Abstract Platform Mockup */}
-        <div class="m-16 md:m-24">
-          <div class="relative mx-auto max-w-5xl">
-            <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 blur-3xl" />
-            <div class="relative rounded-lg border border-border bg-card p-4 shadow-2xl">
-              <div class="aspect-video w-full rounded-md bg-muted">
-                <img
-                  src={ImagenComercyoHero}
-                  alt="commercyo Hero"
-                  class="w-full h-full object-cover rounded-md"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+<div class="mx-4 my-12 sm:mx-8 md:m-24">
+  <div class="relative mx-auto max-w-5xl">
+
+    {/* Glow background */}
+    <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 blur-3xl" />
+
+    {/* Card */}
+    <div class="relative rounded-xl border border-border bg-card p-3 sm:p-4 shadow-2xl">
+
+      {/* Image wrapper */}
+      <div class="aspect-video w-full rounded-lg bg-muted overflow-hidden">
+        <img
+          src={ImagenComercyoHero}
+          alt="Comercyo plataforma digital"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+    </div>
+  </div>
+</div>
