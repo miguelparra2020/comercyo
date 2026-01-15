@@ -1,5 +1,6 @@
 ---
-import {   DescargarApp, LayoutGeneral } from "@globals"
+import LayoutGeneral from "@layout/LayoutGeneral/LayoutGeneral.astro"
+import DescargarApp from "@component/global/Componentes/DescargarApp"
 import { ModuelesActives } from "@util/generalConfig"
 if (!ModuelesActives.DownloadApp) {
   return Astro.redirect('/crear');
