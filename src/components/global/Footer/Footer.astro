@@ -4,9 +4,7 @@
   const currentPath = new URL(currentUrl).pathname;
   const lastSegment = currentPath.split('/').filter(Boolean).pop();
 
-  import {MenuView} from "@globals"
   ---
-  <MenuView client:idle  />
   <div class="relative w-full"> 
     <!-- Tabs (solo en móvil) -->
   <div class="fixed bottom-0 z-40 w-full -translate-x-1/2 bg-white border-t border-gray-200 left-1/2  md:hidden">
