@@ -1,5 +1,8 @@
 ---
-import ImagenCompanyJpg from '@img/logoCompany.jpg'
+import LogoAvif from '@img/logoCompany.avif'
+import LogoWebp from '@img/logoCompany.webp'
+import LogoJpg from '@img/logoCompany.jpg'
+import LogoPng from '@img/logoCompany.png'
 ---
 
 <section class="pt-10 flex  flex-col items-center overflow-hidden bg-neutral-50">
@@ -9,11 +12,20 @@ import ImagenCompanyJpg from '@img/logoCompany.jpg'
 
       <!-- Brand -->
       <div class="flex flex-col items-center mb-8">
-        <img
-          src={ImagenCompanyJpg}
-          alt="commercyo logo"
-          class="w-50 h-50 mb-3 rounded-full object-cover shadow-lg"
-        />
+        <picture>
+  <source srcset={LogoAvif} type="image/avif" />
+  <source srcset={LogoWebp} type="image/webp" />
+  <source srcset={LogoJpg} type="image/jpeg" />
+  <source srcset={LogoPng} type="image/png" />
+
+  <img
+    src={LogoJpg}
+    alt="Comercyo logo"
+    class="w-50 h-50 mb-3 rounded-full object-cover shadow-lg"
+    loading="eager"
+    decoding="async"
+  />
+</picture>
         <span class="text-xl font-semibold tracking-tight text-neutral-900">
           comercyo<span class="text-indigo-600">.com</span>
         </span>
