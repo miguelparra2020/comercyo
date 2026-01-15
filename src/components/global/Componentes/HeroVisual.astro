@@ -1,5 +1,8 @@
 ---
-import ImagenComercyoHero from '@img/comercyohero.png'
+import HeroAvif from '@img/comercyohero.avif'
+import HeroWebp from '@img/comercyohero.webp'
+import HeroJpg from '@img/comercyohero.jpg'
+import HeroPng from '@img/comercyohero.png'
 ---
 
 {/* Hero Visual - Abstract Platform Mockup */}
@@ -14,11 +17,20 @@ import ImagenComercyoHero from '@img/comercyohero.png'
 
       {/* Image wrapper */}
       <div class="aspect-video w-full rounded-lg bg-muted overflow-hidden">
-        <img
-          src={ImagenComercyoHero}
-          alt="Comercyo plataforma digital"
-          class="w-full h-full object-cover"
-        />
+        <picture>
+          <source srcset={HeroAvif} type="image/avif" />
+          <source srcset={HeroWebp} type="image/webp" />
+          <source srcset={HeroJpg} type="image/jpeg" />
+          <source srcset={HeroPng} type="image/png" />
+
+          <img
+            src={HeroJpg}
+            alt="Comercyo plataforma digital"
+            class="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
       </div>
 
     </div>
