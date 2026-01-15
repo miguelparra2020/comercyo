@@ -11,6 +11,7 @@
 			"@globals": ["src/components/global"],
 			"@stores": ["src/stores"],
 			"@component/*": ["src/components/*"],
+			"@layout/*": ["src/layouts/*"],
 			"@style/*": ["src/styles/*"],
 			"@util/*": ["utils/*"],
 			"@img/*": ["src/assets/img/*"],
