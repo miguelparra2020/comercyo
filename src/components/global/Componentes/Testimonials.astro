@@ -1,6 +1,7 @@
 ---
 import ImagenCompanyGeneral from '@img/user.png'
 import ImagenCompanyJpg from '@img/logoCompany.jpg'
+
 const testimonials = [
   {
     name: "Sebastian García",
@@ -26,97 +27,112 @@ const testimonials = [
     audioEmbedUrl:
       "https://open.spotify.com/embed/episode/5ORgPRkIIDqielDWtTo0HP"
   }
-];
-
-
-
+]
 ---
-<section class="py-24 bg-white">
-  <!-- Header --> <div class="max-w-3xl mx-auto text-center mb-20"> <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-balance text-gray-900"> Lo que dicen quienes ya empezaron con <span class="bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent"> Comercyo </span> </h2> <p class="text-xl text-gray-600 text-pretty"> Negocios reales que decidieron construir su ecosistema digital con visión de futuro. </p> </div>
+<section
+  class="py-24 bg-white"
+  aria-labelledby="testimonials-title"
+>
+  <!-- Header -->
+  <div class="max-w-3xl mx-auto text-center mb-20">
+    <h2
+      id="testimonials-title"
+      class="text-4xl sm:text-5xl font-bold mb-6 text-balance text-gray-900"
+    >
+      Lo que dicen quienes ya empezaron con
+      <span class="bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+        Comercyo
+      </span>
+    </h2>
+
+    <p class="text-xl text-gray-600 text-pretty">
+      Negocios reales que decidieron construir su ecosistema digital con visión de futuro.
+    </p>
+  </div>
+
+  <!-- Grid -->
   <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-  {testimonials.map((testimonial) => (
-    <div
-      class="p-4 bg-white border border-gray-200 rounded-xl
-             hover:shadow-xl transition-all flex flex-col"
-    >
+    {testimonials.map((testimonial) => (
+      <article
+        class="p-4 bg-white border border-gray-200 rounded-xl
+               hover:shadow-xl transition-all flex flex-col"
+      >
+        <!-- Business -->
+        <div class="mb-6 flex justify-center items-center space-x-4">
+          <img
+            src={testimonial.businessImage}
+            alt={`Logo de ${testimonial.company}`}
+            class="h-14 object-contain"
+          />
 
-      {/* Business image */}
-      <div class="mb-6 flex justify-center items-center space-x-4">
-        <img
-          src={testimonial.businessImage}
-          alt={testimonial.company}
-          class="h-14 object-contain"
-        />
-        <h1><strong>{testimonial.company}</strong></h1>
-      </div>
-
-      {/* Quote */}
-      <p class="text-gray-700 leading-relaxed mb-8 text-sm flex-1">
-        “{testimonial.quote}”
-      </p>
-
-      {/* Author */}
-      <div class="flex items-center gap-4 pt-6 border-t border-gray-200">
-        
-        {/* Avatar */}
-        <img
-          src={testimonial.avatar}
-          alt={testimonial.name}
-          class="w-12 h-12 rounded-full object-cover border"
-        />
-
-        {/* Info */}
-        <div class="flex-1">
-          <p class="font-semibold text-gray-900 text-sm">
-            {testimonial.name}
-          </p>
-          <p class="text-xs text-gray-600">
-            {testimonial.role}
-          </p>
+          <!-- h3 correcto (no h1 dentro de cards) -->
+          <h3 class="text-base font-bold text-gray-900">
+            {testimonial.company}
+          </h3>
         </div>
-      </div>
 
-      {/* CTA */}
-<div class="mt-6 flex flex-col gap-3">
-  {/* Ver comercio */}
-  <a
-    href={testimonial.businessUrl}
-    target="_blank"
-    rel="noopener noreferrer"
-    class="inline-flex items-center justify-center gap-2
-           px-4 py-3 rounded-lg text-sm font-semibold
-           bg-gradient-to-r from-indigo-600 to-blue-600
-           text-white hover:opacity-90 transition"
-  >
-    Ver su comercio
-    <svg
-      class="w-4 h-4"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M14 5l7 7m0 0l-7 7m7-7H3"
-      />
-    </svg>
-  </a>
-{testimonial.audioEmbedUrl && (
-  <iframe
-    class="w-full pt-4 h-24"
-    src={`${testimonial.audioEmbedUrl}?utm_source=comercyo`}
-    loading="lazy"
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-  />
-)}
-  
-</div>
+        <!-- Quote -->
+        <p class="text-gray-700 leading-relaxed mb-8 text-sm flex-1">
+          “{testimonial.quote}”
+        </p>
 
+        <!-- Author -->
+        <div class="flex items-center gap-4 pt-6 border-t border-gray-200">
+          <img
+            src={testimonial.avatar}
+            alt={`Foto de ${testimonial.name}`}
+            class="w-12 h-12 rounded-full object-cover border"
+          />
 
+          <div class="flex-1">
+            <p class="font-semibold text-gray-900 text-sm">
+              {testimonial.name}
+            </p>
+            <p class="text-xs text-gray-600">
+              {testimonial.role}
+            </p>
+          </div>
+        </div>
 
-    </div>
-  ))}
-</div>
+        <!-- CTA -->
+        <div class="mt-6 flex flex-col gap-3">
+          <a
+            href={testimonial.businessUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2
+                   px-4 py-3 rounded-lg text-sm font-semibold
+                   bg-gradient-to-r from-indigo-600 to-blue-600
+                   text-white hover:opacity-90 transition"
+            aria-label={`Ver el comercio ${testimonial.company}`}
+          >
+            Ver su comercio
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </a>
+
+          {testimonial.audioEmbedUrl && (
+            <iframe
+              class="w-full pt-4 h-24"
+              src={`${testimonial.audioEmbedUrl}?utm_source=comercyo`}
+              title={`Testimonio en audio de ${testimonial.name} - ${testimonial.company}`}
+              loading="lazy"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            />
+          )}
+        </div>
+      </article>
+    ))}
+  </div>
 </section>
