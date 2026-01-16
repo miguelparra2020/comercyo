@@ -9,4 +9,5 @@ export { default as TargetAudience } from "./TargetAudience.astro"
 export { default as Differentiators } from "./Differentiators.astro"
 export { default as Testimonials } from "./Testimonials.astro"
 export { default as PricingProcess } from "./PricingProcess.astro"
+export { default as FooterCredits } from "./FooterCredits.astro"
 
