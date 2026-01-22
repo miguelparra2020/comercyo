@@ -7,7 +7,7 @@ import "@style/tailwind.css"
 import "@style/fonts.css"
 
 // Helper imports
-import { seoConfig } from "@util/seoConfig"
+import { seoConfig, organizationSchema } from "@util/seoConfig"
 
 // Props
 export interface Props {
@@ -67,6 +67,11 @@ const {
 				card: seoConfig.twitter.card as any
 			}}
 		/>
+
+		<!-- Schema.org – Organization -->
+		<script type="application/ld+json">
+			{JSON.stringify(organizationSchema)}
+		</script>
 
 		<!-- Global meta tags. -->
 		<meta charset="utf-8" />
