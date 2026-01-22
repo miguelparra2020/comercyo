@@ -13,7 +13,7 @@ export const ModuelesActives = {
 }
 
 export const company = {
-  name: "Comercyo",
+  name: "Comercyo®",
   principalColorTitles: "blue",
   principalColorParrafos: "slate",
   principalColorButtonsBg: "blue",

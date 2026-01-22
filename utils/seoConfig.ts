@@ -5,7 +5,7 @@ import type { ManifestOptions } from "vite-plugin-pwa"
  * Defines the default SEO configuration for the website.
  */
 export const seoConfig = {
-	baseURL: "https://comercyo.com", // Change this to your production URL.
+	baseURL: "https://Comercyo®.com", // Change this to your production URL.
 	description:
 		"Comercyo® es una empresa de desarrollo de software especializado en landing pages personalizadas de alto rendimiento. Actualmente construimos un e-commerce integral que unifica ERP y CMS, diseñado para escalar negocios y optimizar su presencia digital.", // Change this to be your website's description.
 	type: "website",
@@ -25,13 +25,13 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Comercyo®",
-  url: "https://comercyo.com",
-  logo: "https://comercyo.com/favicons/favicon-512x512.png",
+  url: "https://Comercyo®.com",
+  logo: "https://Comercyo®.com/favicons/favicon-512x512.png",
   description:
     "Comercyo® es una empresa de desarrollo de software especializado en landing pages personalizadas de alto rendimiento.",
   sameAs: [
-    "https://www.instagram.com/comercyo",
-    "https://www.linkedin.com/company/comercyo"
+    "https://www.instagram.com/Comercyo®",
+    "https://www.linkedin.com/company/Comercyo®"
   ]
 }
 
