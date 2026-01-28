@@ -3,6 +3,7 @@ import LogoAvif from '@img/logoCompany.avif'
 import LogoWebp from '@img/logoCompany.webp'
 import LogoJpg from '@img/logoCompany.jpg'
 import LogoPng from '@img/logoCompany.png'
+import { CircleCheckBig, Globe, LaptopMinimalCheck, Megaphone, MessageCircleMore, ShieldCheck, TicketCheck } from 'lucide-react'
 ---
 
 <section class="py-16 lg:py-24 bg-neutral-50">
@@ -25,7 +26,7 @@ import LogoPng from '@img/logoCompany.png'
       <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
         <a href="https://api.whatsapp.com/send?phone=573217028011&text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-4 rounded-xl font-extrabold text-lg transition-all shadow-lg shadow-indigo-600/25 flex items-center gap-2">
           ¡Aprovechar Oferta!
-          <span class="material-symbols-outlined">arrow_forward</span>
+          <MessageCircleMore />
         </a>
         <div class="flex flex-col">
           <span class="text-neutral-400 line-through text-lg font-medium">$1.399.000 COP</span>
@@ -41,9 +42,9 @@ import LogoPng from '@img/logoCompany.png'
       </div>
       <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl flex items-center gap-4 border border-neutral-100 max-w-xs">
         <div class="size-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
-          <span class="material-symbols-outlined">verified</span>
+          <ShieldCheck />
         </div>
-        <p class="text-xs font-bold leading-tight">Resultados Garantizados en menos de 15 días.</p>
+        <p class="text-xs font-bold leading-tight">Resultados Garantizados de 1 a 3 meses.</p>
       </div>
     </div>
   </div>
@@ -63,7 +64,7 @@ import LogoPng from '@img/logoCompany.png'
         <div class="absolute top-0 right-0 bg-indigo-600 px-4 py-1 font-black text-xs uppercase tracking-tighter text-white rounded-bl-lg">OFERTA LIMITADA</div>
         <div class="flex justify-between items-center">
           <p class="text-neutral-900 text-sm font-bold uppercase tracking-widest">Inversión Especial</p>
-          <span class="material-symbols-outlined text-indigo-600">auto_awesome</span>
+          <TicketCheck />
         </div>
         <div class="flex items-baseline gap-4">
           <p class="text-neutral-900 tracking-tight text-5xl font-black leading-none">$599.000 COP</p>
@@ -77,7 +78,7 @@ import LogoPng from '@img/logoCompany.png'
 <div class="py-24 bg-neutral-50" id="bundle">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
     <div class="text-center mb-20 space-y-4">
-      <h2 class="text-indigo-600 font-black uppercase tracking-[0.2em] text-sm">¿Qué incluye el bundle?</h2>
+      <h2 class="text-indigo-600 font-black uppercase tracking-[0.2em] text-sm">¿Qué incluye el bono?</h2>
       <h3 class="text-4xl lg:text-5xl font-black text-neutral-900 tracking-tight">Todo lo que necesitas para despegar.</h3>
       <p class="text-neutral-600 max-w-2xl mx-auto text-lg">
         Sin cargos ocultos. Un diseño premium y una estrategia de tráfico real para que tu negocio empiece a facturar.
@@ -86,7 +87,7 @@ import LogoPng from '@img/logoCompany.png'
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div class="group flex flex-col gap-6 p-8 rounded-2xl bg-white shadow-sm border border-neutral-100 transition-all hover:shadow-2xl hover:shadow-indigo-600/10 hover:-translate-y-1">
         <div class="size-14 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 transition-transform group-hover:scale-110">
-          <span class="material-symbols-outlined text-3xl font-bold">devices</span>
+          <LaptopMinimalCheck />
         </div>
         <div class="space-y-3">
           <h4 class="text-xl font-bold text-neutral-900">Diseño Web Profesional</h4>
@@ -96,14 +97,14 @@ import LogoPng from '@img/logoCompany.png'
         </div>
         <div class="pt-4 mt-auto border-t border-neutral-50">
           <ul class="space-y-2 text-xs font-bold text-neutral-500 uppercase tracking-tighter">
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-indigo-600 text-sm">check_circle</span> UX/UI Premium</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-indigo-600 text-sm">check_circle</span> SEO On-page</li>
+            <li class="flex items-center gap-2"><CircleCheckBig /> UX/UI Premium</li>
+            <li class="flex items-center gap-2"><CircleCheckBig /> SEO On-page</li>
           </ul>
         </div>
       </div>
       <div class="group flex flex-col gap-6 p-8 rounded-2xl bg-white shadow-sm border border-neutral-100 transition-all hover:shadow-2xl hover:shadow-indigo-600/10 hover:-translate-y-1">
         <div class="size-14 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 transition-transform group-hover:scale-110">
-          <span class="material-symbols-outlined text-3xl font-bold">language</span>
+          <Globe />
         </div>
         <div class="space-y-3">
           <h4 class="text-xl font-bold text-neutral-900">.com Dominio Incluido</h4>
@@ -113,14 +114,14 @@ import LogoPng from '@img/logoCompany.png'
         </div>
         <div class="pt-4 mt-auto border-t border-neutral-50">
           <ul class="space-y-2 text-xs font-bold text-neutral-500 uppercase tracking-tighter">
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-indigo-600 text-sm">check_circle</span> Certificado SSL</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-indigo-600 text-sm">check_circle</span> WhoIs Privacy</li>
+            <li class="flex items-center gap-2"><CircleCheckBig /> Certificado SSL</li>
+            <li class="flex items-center gap-2"><CircleCheckBig /> WhoIs Privacy</li>
           </ul>
         </div>
       </div>
       <div class="group flex flex-col gap-6 p-8 rounded-2xl bg-white shadow-sm border border-neutral-100 transition-all hover:shadow-2xl hover:shadow-indigo-600/10 hover:-translate-y-1">
         <div class="size-14 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600 transition-transform group-hover:scale-110">
-          <span class="material-symbols-outlined text-3xl font-bold">ads_click</span>
+          <Megaphone />
         </div>
         <div class="space-y-3">
           <h4 class="text-xl font-bold text-neutral-900">Estrategia de Publicidad</h4>
@@ -130,8 +131,8 @@ import LogoPng from '@img/logoCompany.png'
         </div>
         <div class="pt-4 mt-auto border-t border-neutral-50">
           <ul class="space-y-2 text-xs font-bold text-neutral-500 uppercase tracking-tighter">
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-600 text-sm">check_circle</span> Google Search Ads</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-600 text-sm">check_circle</span> Meta Business</li>
+            <li class="flex items-center gap-2"><CircleCheckBig /> Google Search Ads</li>
+            <li class="flex items-center gap-2"><CircleCheckBig /> Meta Business</li>
           </ul>
         </div>
       </div>
@@ -152,13 +153,9 @@ import LogoPng from '@img/logoCompany.png'
         </p>
         <div class="flex flex-wrap justify-center gap-4">
           <a href="https://api.whatsapp.com/send?phone=573217028011&text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" class="bg-white hover:bg-neutral-100 text-indigo-600 px-10 py-5 rounded-2xl font-black text-xl transition-all flex items-center gap-3 shadow-xl">
-            <span class="material-symbols-outlined">chat</span>
+            <MessageCircleMore/>
             Contactar por WhatsApp
           </a>
-        </div>
-        <div class="flex items-center gap-2 text-white/60 font-bold uppercase tracking-widest text-xs">
-          <span class="material-symbols-outlined text-sm">bolt</span>
-          Respuesta en menos de 10 minutos
         </div>
       </div>
     </div>
